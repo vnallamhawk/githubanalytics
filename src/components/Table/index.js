@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
-class Table extends React.Component {
+class Table extends Component {
   render() {
 
     let imageFormatter = (cell, row) => {
@@ -21,8 +21,6 @@ class Table extends React.Component {
     for (let [k, v] of Object.entries(this.props.columns)) {
       columns.push(setColumnTemplate(k, v));
     }
-
-    console.log(columns);
 
     return (
       <BootstrapTable

@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 import Table from '../Table';
 
-class Board extends Component {
+class Board extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {}
     }
     render() {
-        return (<div className="board"><Card header={<h1>{this.props.header}</h1>}>
+        return (<div key={this.props.id} className="board"><Card header={<h1>{this.props.header}</h1>}>
             <Card>
                 <Card.Body><h3>{this.props.header}</h3></Card.Body>
             </Card>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import moment from 'moment';
 import axios from 'axios';
 
@@ -6,9 +6,9 @@ import { BASE_URL } from '../../config';
 
 import Board from '../Board';
 
-const repoColumns = { id: "Id", name: "Name", description: "Description", stargazers_count: "Stars" };
-const userColumns = { id: "Id", login: "Login", avatar: "Avatar", followers: "Followers" };
-class Analytics extends Component {
+const repoColumns = { id: "Repo Id", name: "Name", description: "Description", stargazers_count: "Stars" };
+const userColumns = { id: "User Id", login: "Login", avatar: "Avatar", followers: "Followers" };
+class Analytics extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
